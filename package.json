@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@chat-adapter/slack": "^4.25.0",
+    "@chat-adapter/state-memory": "^4.26.0",
     "@chat-adapter/state-redis": "^4.25.0",
     "@zernio/chat-sdk-adapter": "^0.2.3",
     "chat": "^4.25.0",

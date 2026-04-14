@@ -162,6 +162,13 @@
     "@slack/web-api" "^7.14.0"
     chat "4.25.0"
 
+"@chat-adapter/state-memory@^4.26.0":
+  version "4.26.0"
+  resolved "https://registry.npmjs.org/@chat-adapter/state-memory/-/state-memory-4.26.0.tgz"
+  integrity sha512-FsfyM/A9Bf1yFc1FWmOsK+a4YVwm5FogX25hZxFG6cEvyFb6Cd924SsbtvF06yItY/7J2UFetCsMmBPkdPKshQ==
+  dependencies:
+    chat "4.26.0"
+
 "@chat-adapter/state-redis@^4.25.0":
   version "4.25.0"
   resolved "https://registry.npmjs.org/@chat-adapter/state-redis/-/state-redis-4.25.0.tgz"
@@ -965,6 +972,19 @@ chat@^4.0.0, chat@^4.25.0, chat@4.25.0:
     remend "^1.2.1"
     unified "^11.0.5"
 
+chat@4.26.0:
+  version "4.26.0"
+  resolved "https://registry.npmjs.org/chat/-/chat-4.26.0.tgz"
+  integrity sha512-QToDnIEGpyb8yQA6YLMHOSRK30YVk4RtsyFyuWFYyB2c4jQlyIrSWtwVK7qyvmvqzQp9uDwCdJRAhS8GtCHAGQ==
+  dependencies:
+    "@workflow/serde" "4.1.0-beta.2"
+    mdast-util-to-string "^4.0.0"
+    remark-gfm "^4.0.0"
+    remark-parse "^11.0.0"
+    remark-stringify "^11.0.0"
+    remend "^1.2.1"
+    unified "^11.0.5"
+
 client-only@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/client-only/-/client-only-0.0.1.tgz"
@@ -1600,9 +1620,9 @@ flatted@^3.2.9:
   integrity sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==
 
 follow-redirects@^1.15.11:
-  version "1.15.11"
-  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.11.tgz"
-  integrity sha512-deG2P0JfjrTxl50XGCDyfI97ZGVCxIpfKYmfyrQ54n5FO/0gfIES8C/Psl6kWVDolizcaaxZJnTS0QSMxvnsBQ==
+  version "1.16.0"
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.16.0.tgz"
+  integrity sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==
 
 for-each@^0.3.3, for-each@^0.3.5:
   version "0.3.5"
