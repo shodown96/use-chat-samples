@@ -2,7 +2,7 @@ import { createSlackAdapter } from "@chat-adapter/slack";
 import { createRedisState } from "@chat-adapter/state-redis";
 import { Chat } from "chat";
 import { zernioAdapter } from "./zernio";
-// import { createMemoryState } from "@chat-adapter/state-memory";
+import { createMemoryState } from "@chat-adapter/state-memory";
 
 export const bot = new Chat({
   userName: "mybot",
@@ -10,7 +10,7 @@ export const bot = new Chat({
     slack: createSlackAdapter(),
     zernio: zernioAdapter,
   },
-  state: createRedisState(),
+  state: createMemoryState(),
 });
 
 // Respond when someone @mentions the bot
