@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cross-Platform AI Bot (Vercel Chat SDK Experiment)
+
+A lightweight experiment using Vercel Chat SDK and AI SDK to build a chatbot that can operate across multiple platforms from a single codebase.
+
+Currently tested with Slack and Bluesky, with architecture designed to extend into platforms like WhatsApp, Twitter/X, Instagram, and more.
+
+## Current Features
+
+- Cross-platform bot architecture
+- Slack integration
+- Bluesky integration via Zernio
+- AI chatbot responses powered by Vercel AI SDK
+- YouTube video summarization
+- Follow-up task execution based on summarized content
+- Platform-aware message formatting
+- Shared logic across integrations
+
+## Tech Stack
+
+- Next.js
+- Vercel AI SDK
+- Vercel Chat SDK
+- Slack API
+- Zernio
+- TypeScript
+- Redis
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+````
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open in browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Expose the api for testing using ngrok (optional):
 
-## Learn More
+```bash
+ngrok http 3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a `.env.local` file and configure required credentials:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+ZERNIO_API_KEY=""
+ZERNIO_WEBHOOK_SECRET=""
 
-## Deploy on Vercel
+SLACK_BOT_TOKEN=""
+SLACK_SIGNING_SECRET=""
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+REDIS_URL=redis://localhost:6379
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+OPENAI_API_KEY=""
+```
+
+Add any other provider keys depending on integrations enabled.
+
+## Current Workflow
+
+1. Receive message from platform (Slack / Bluesky) through webhooks
+2. Route through shared bot logic
+3. Process request with AI SDK
+4. Return platform-formatted response
+5. Support follow-up tasks
+
+## Example Use Cases
+
+* Summarize YouTube videos
+* Ask follow-up questions about a video
+* Multi-platform AI assistant
+* Content repurposing workflows
+* Automated support bots
+
+## Next Steps
+
+* MCP integrations
+* Document extraction
+* More Chat SDK adapters
+* Optimizing system for Production 
+
+## Status
+
+Early prototype / active exploration.
